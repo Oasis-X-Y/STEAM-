@@ -1,0 +1,9 @@
+param_name,param_index,avg_train_accuracy,avg_test_accuracy,avg_performance,params
+组合1-最严格,1,0.49039141834681227,0.4664516286423032,0.47842152349455774,"{'name': '组合1-最严格', 'n_estimators': 50, 'max_depth': 5, 'min_samples_split': 20, 'min_samples_leaf': 10, 'max_features': 0.3, 'bootstrap': True}"
+组合2-较严格,2,0.6473991265236947,0.47022788437451846,0.5588135054491066,"{'name': '组合2-较严格', 'n_estimators': 100, 'max_depth': 10, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 0.5, 'bootstrap': True}"
+组合3-中等,3,0.8844093438688637,0.46519198421071106,0.6748006640397874,"{'name': '组合3-中等', 'n_estimators': 150, 'max_depth': 15, 'min_samples_split': 5, 'min_samples_leaf': 2, 'max_features': 0.7, 'bootstrap': True}"
+组合4-较放松,4,0.9674023917165896,0.4636148998621353,0.7155086457893625,"{'name': '组合4-较放松', 'n_estimators': 200, 'max_depth': 20, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'bootstrap': True}"
+组合5-放松,5,0.9935431331386123,0.44755279707110357,0.720547965104858,"{'name': '组合5-放松', 'n_estimators': 200, 'max_depth': 30, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': None, 'bootstrap': True}"
+组合6-更放松,6,0.9935431331386123,0.45101577798365255,0.7222794555611325,"{'name': '组合6-更放松', 'n_estimators': 250, 'max_depth': 40, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': None, 'bootstrap': True}"
+组合7-很放松,7,0.9935431331386123,0.45101577798365255,0.7222794555611325,"{'name': '组合7-很放松', 'n_estimators': 250, 'max_depth': 50, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': None, 'bootstrap': True}"
+组合8-最放松,8,0.9935431331386123,0.44912571632236187,0.7213344247304871,"{'name': '组合8-最放松', 'n_estimators': 300, 'max_depth': None, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': None, 'bootstrap': True}"

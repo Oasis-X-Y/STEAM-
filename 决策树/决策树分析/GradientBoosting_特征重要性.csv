@@ -1,0 +1,111 @@
+feature,importance
+achievements,0.09553986884841963
+price_initial,0.08058467592140824
+is_free,0.0728677828224497
+supported_languages,0.07227088717453584
+price_final,0.07099383077170851
+max_age_rating,0.05184242616413438
+category_Steam Trading Cards,0.03918430016691927
+genre_Adventure,0.028313224739226144
+dlc,0.02715826859645549
+genre_Casual,0.025401943161484874
+genre_Indie,0.02346130851968617
+has_dejus_rating,0.02257793582407113
+genre_Action,0.022546982737518
+genre_RPG,0.020750086784143317
+genre_Strategy,0.018529962654430174
+price_discount_percent,0.01696242575662398
+category_Steam Cloud,0.015623885579588308
+has_violence_content,0.014670676205402758
+platforms_mac,0.014117018237567823
+is_mainstream_publisher,0.013758646981247312
+genre_Simulation,0.013039979523566761
+platforms_linux,0.012906065864932082
+category_Partial Controller Support,0.012227960403523605
+has_vr_support,0.012019985806347864
+category_Steam Achievements,0.01196519660805108
+genre_Early Access,0.011416600687822704
+is_mainstream_developer,0.00995354880564323
+category_Steam Leaderboards,0.00949661917003284
+has_esrb_rating,0.007555487889517585
+category_Single-player,0.006931367378533049
+genre_Sports,0.006741389688697276
+category_Full controller support,0.005815471558281386
+controller_support_binary,0.005794960826546533
+controller_support,0.005751989206051621
+category_Multi-player,0.005174843149094069
+category_Online Co-op,0.005104523002197413
+banned_in_germany,0.004651323949600738
+support_english_0.0,0.0046320715085252035
+genre_Free To Play,0.004399363032190992
+category_PvP,0.0043874279374441
+category_Remote Play Together,0.004168243292000054
+category_Shared/Split Screen Co-op,0.004145345837207854
+has_pegi_rating,0.004103725391121779
+category_Shared/Split Screen,0.004077814288034397
+category_Online PvP,0.004043222996244986
+genre_Racing,0.004036649212122778
+support_english_1.0,0.0038292653154706766
+category_Stats,0.0035689015864240267
+category_Co-op,0.0035499326063814386
+category_Cross-Platform Multiplayer,0.003307174031084727
+category_Captions available,0.00320595812576447
+genre_Massively Multiplayer,0.0031815536704885737
+category_Includes level editor,0.0028440336883319094
+category_Family Sharing,0.0026314844783151673
+category_Shared/Split Screen PvP,0.002628566959873481
+category_In-App Purchases,0.002560900435528019
+category_Playable without Timed Input,0.002416846777034218
+category_Steam Workshop,0.0018991148743679337
+required_age,0.0017367049279006072
+category_Custom Volume Controls,0.0016736862808075014
+category_Stereo Sound,0.001632102435962327
+category_Keyboard Only Option,0.0016160223366635295
+genre_Utilities,0.0016113472140885767
+category_MMO,0.001597948819130317
+category_LAN Co-op,0.0014762271689306192
+category_LAN PvP,0.0013138770478882157
+category_Adjustable Text Size,0.0012829326355398227
+category_Camera Comfort,0.001197519783883863
+category_Mouse Only Option,0.001155470269426926
+category_Surround Sound,0.0010242476140450581
+category_Save Anytime,0.0009908582883793008
+category_Commentary available,0.0009878803333769372
+genre_Video Production,0.000977925204054053
+genre_Design & Illustration,0.0009703518984256072
+category_Subtitle Options,0.0009302403538622047
+genre_Gore,0.0009240352944446704
+category_Remote Play on TV,0.0009186237722611124
+category_Adjustable Difficulty,0.000874665423854308
+genre_Software Training,0.0008687190343524723
+category_HDR available,0.0008238884167996442
+genre_Violent,0.0008212714285046106
+genre_Animation & Modeling,0.0007703336287410006
+category_Color Alternatives,0.0007224502417716751
+category_Remote Play on Tablet,0.0004793590766260736
+category_Touch Only Option,0.00044335704647238374
+genre_Education,0.000398469107927309
+category_Valve Anti-Cheat enabled,0.0003924844836336536
+category_Steam Timeline,0.0003790862956704294
+category_Remote Play on Phone,0.0003672928951856243
+genre_Photo Editing,0.0003538577253399459
+support_english_Unknown,0.00023294597029311376
+category_Steam Turn Notifications,0.00022120214449279613
+genre_Audio Production,0.00014673044474652677
+genre_Nudity,0.00013730834100540866
+genre_Game Development,0.00013141454066975102
+category_Narrated Game Menus,6.51214476958458e-05
+platforms_windows,2.0353242565601848e-05
+genre_Web Publishing,5.739413739769764e-06
+genre_Sexual Content,4.900761423219619e-06
+genre_Movie,2.1888423589323306e-18
+category_Estadísticas,0.0
+category_JcJ,0.0
+category_Cooperativos en pantalla dividida/compartida,0.0
+category_Cooperativos en línea,0.0
+category_Cooperativos,0.0
+category_JcJ en línea,0.0
+category_Pantalla dividida/compartida,0.0
+category_JcJ en pantalla dividida/compartida,0.0
+category_Multijugador multiplataforma,0.0
+category_Multijugador,0.0

@@ -1,0 +1,252 @@
+模型: GradientBoosting
+训练准确率: 0.9912
+测试准确率: 0.4079
+性能指标（训练+测试）/2: 0.6996
+性能排名: 3
+聚类标签: [0, 1, 2, 3, 4]
+训练样本数量: 3175
+测试样本数量: 353
+========================================================================================================================
+
+特征重要性（前50个特征）:
+========================================================================================================================
+achievements: 0.095540
+price_initial: 0.080585
+is_free: 0.072868
+supported_languages: 0.072271
+price_final: 0.070994
+max_age_rating: 0.051842
+category_Steam Trading Cards: 0.039184
+genre_Adventure: 0.028313
+dlc: 0.027158
+genre_Casual: 0.025402
+genre_Indie: 0.023461
+has_dejus_rating: 0.022578
+genre_Action: 0.022547
+genre_RPG: 0.020750
+genre_Strategy: 0.018530
+price_discount_percent: 0.016962
+category_Steam Cloud: 0.015624
+has_violence_content: 0.014671
+platforms_mac: 0.014117
+is_mainstream_publisher: 0.013759
+genre_Simulation: 0.013040
+platforms_linux: 0.012906
+category_Partial Controller Support: 0.012228
+has_vr_support: 0.012020
+category_Steam Achievements: 0.011965
+genre_Early Access: 0.011417
+is_mainstream_developer: 0.009954
+category_Steam Leaderboards: 0.009497
+has_esrb_rating: 0.007555
+category_Single-player: 0.006931
+genre_Sports: 0.006741
+category_Full controller support: 0.005815
+controller_support_binary: 0.005795
+controller_support: 0.005752
+category_Multi-player: 0.005175
+category_Online Co-op: 0.005105
+banned_in_germany: 0.004651
+support_english_0.0: 0.004632
+genre_Free To Play: 0.004399
+category_PvP: 0.004387
+category_Remote Play Together: 0.004168
+category_Shared/Split Screen Co-op: 0.004145
+has_pegi_rating: 0.004104
+category_Shared/Split Screen: 0.004078
+category_Online PvP: 0.004043
+genre_Racing: 0.004037
+support_english_1.0: 0.003829
+category_Stats: 0.003569
+category_Co-op: 0.003550
+category_Cross-Platform Multiplayer: 0.003307
+
+
+正中间树的完整规则（共250棵树）:
+========================================================================================================================
+
+============================================================ 正中间树（第126棵，共250棵） ============================================================
+|--- genre_Software Training <= 0.50
+|   |--- is_mainstream_publisher <= 0.50
+|   |   |--- price_final <= 5249.00
+|   |   |   |--- price_initial <= 199.50
+|   |   |   |   |--- achievements <= 0.50
+|   |   |   |   |   |--- genre_Action <= 0.50
+|   |   |   |   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |   |   |   |--- supported_languages <= 1.50
+|   |   |   |   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |   |   |   |--- has_vr_support <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |   |   |--- has_vr_support >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Simulation <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.38]
+|   |   |   |   |   |   |   |   |   |   |--- genre_Simulation >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |   |   |   |--- price_final <= 74.00
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating <= 1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating >  1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.30]
+|   |   |   |   |   |   |   |   |   |--- price_final >  74.00
+|   |   |   |   |   |   |   |   |   |   |--- support_english_1.0 <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |   |   |   |--- support_english_1.0 >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |--- supported_languages >  1.50
+|   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |--- genre_Action >  0.50
+|   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |--- achievements >  0.50
+|   |   |   |   |   |--- achievements <= 10.50
+|   |   |   |   |   |   |--- achievements <= 9.50
+|   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |--- achievements >  9.50
+|   |   |   |   |   |   |   |--- max_age_rating <= 1.50
+|   |   |   |   |   |   |   |   |--- has_dejus_rating <= 0.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |   |--- has_dejus_rating >  0.50
+|   |   |   |   |   |   |   |   |   |--- price_final <= 74.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |   |   |--- price_final >  74.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |--- max_age_rating >  1.50
+|   |   |   |   |   |   |   |   |--- value: [-0.03]
+|   |   |   |   |   |--- achievements >  10.50
+|   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |--- price_initial >  199.50
+|   |   |   |   |--- value: [-0.04]
+|   |   |--- price_final >  5249.00
+|   |   |   |--- price_initial <= 5749.00
+|   |   |   |   |--- value: [0.00]
+|   |   |   |--- price_initial >  5749.00
+|   |   |   |   |--- value: [0.12]
+|   |--- is_mainstream_publisher >  0.50
+|   |   |--- category_Camera Comfort <= 0.50
+|   |   |   |--- supported_languages <= 1.50
+|   |   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |   |--- max_age_rating <= 15.00
+|   |   |   |   |   |   |--- price_final <= 949.00
+|   |   |   |   |   |   |   |--- value: [-0.04]
+|   |   |   |   |   |   |--- price_final >  949.00
+|   |   |   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |   |   |--- genre_Casual <= 0.50
+|   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |   |--- genre_Casual >  0.50
+|   |   |   |   |   |   |   |   |   |--- price_final <= 1199.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.00]
+|   |   |   |   |   |   |   |   |   |--- price_final >  1199.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |   |   |--- value: [-0.13]
+|   |   |   |   |   |--- max_age_rating >  15.00
+|   |   |   |   |   |   |--- price_final <= 84.00
+|   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |--- price_final >  84.00
+|   |   |   |   |   |   |   |--- price_initial <= 1149.00
+|   |   |   |   |   |   |   |   |--- dlc <= 0.50
+|   |   |   |   |   |   |   |   |   |--- price_final <= 799.00
+|   |   |   |   |   |   |   |   |   |   |--- achievements <= 8.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [-0.06]
+|   |   |   |   |   |   |   |   |   |   |--- achievements >  8.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |   |   |--- price_final >  799.00
+|   |   |   |   |   |   |   |   |   |   |--- category_Steam Achievements <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- category_Steam Achievements >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |   |--- dlc >  0.50
+|   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |--- price_initial >  1149.00
+|   |   |   |   |   |   |   |   |--- value: [-0.08]
+|   |   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |--- has_dejus_rating <= 0.50
+|   |   |   |   |   |   |   |--- price_final <= 849.00
+|   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |--- price_final >  849.00
+|   |   |   |   |   |   |   |   |--- is_mainstream_developer <= 0.50
+|   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |   |--- is_mainstream_developer >  0.50
+|   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |--- has_dejus_rating >  0.50
+|   |   |   |   |   |   |   |--- banned_in_germany <= 0.50
+|   |   |   |   |   |   |   |   |--- price_final <= 1199.00
+|   |   |   |   |   |   |   |   |   |--- value: [-0.07]
+|   |   |   |   |   |   |   |   |--- price_final >  1199.00
+|   |   |   |   |   |   |   |   |   |--- achievements <= 6.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |   |   |--- achievements >  6.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |--- banned_in_germany >  0.50
+|   |   |   |   |   |   |   |   |--- price_discount_percent <= 16.50
+|   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |   |--- price_discount_percent >  16.50
+|   |   |   |   |   |   |   |   |   |--- has_violence_content <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |   |   |--- has_violence_content >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |--- category_Full controller support <= 0.50
+|   |   |   |   |   |   |   |--- value: [-0.06]
+|   |   |   |   |   |   |--- category_Full controller support >  0.50
+|   |   |   |   |   |   |   |--- max_age_rating <= 15.00
+|   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |--- max_age_rating >  15.00
+|   |   |   |   |   |   |   |   |--- price_final <= 99.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.80]
+|   |   |   |   |   |   |   |   |--- price_final >  99.50
+|   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |--- supported_languages >  1.50
+|   |   |   |   |--- achievements <= 96.00
+|   |   |   |   |   |--- has_dejus_rating <= 0.50
+|   |   |   |   |   |   |--- category_Steam Achievements <= 0.50
+|   |   |   |   |   |   |   |--- platforms_linux <= 0.50
+|   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |--- platforms_linux >  0.50
+|   |   |   |   |   |   |   |   |--- value: [0.00]
+|   |   |   |   |   |   |--- category_Steam Achievements >  0.50
+|   |   |   |   |   |   |   |--- achievements <= 3.50
+|   |   |   |   |   |   |   |   |--- value: [0.80]
+|   |   |   |   |   |   |   |--- achievements >  3.50
+|   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |--- has_dejus_rating >  0.50
+|   |   |   |   |   |   |--- controller_support_binary <= 0.50
+|   |   |   |   |   |   |   |--- value: [-0.08]
+|   |   |   |   |   |   |--- controller_support_binary >  0.50
+|   |   |   |   |   |   |   |--- achievements <= 10.50
+|   |   |   |   |   |   |   |   |--- genre_Strategy <= 0.50
+|   |   |   |   |   |   |   |   |   |--- supported_languages <= 27.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.13]
+|   |   |   |   |   |   |   |   |   |--- supported_languages >  27.50
+|   |   |   |   |   |   |   |   |   |   |--- price_initial <= 249.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [-0.03]
+|   |   |   |   |   |   |   |   |   |   |--- price_initial >  249.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |   |--- genre_Strategy >  0.50
+|   |   |   |   |   |   |   |   |   |--- achievements <= 3.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |   |   |--- achievements >  3.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |   |   |--- achievements >  10.50
+|   |   |   |   |   |   |   |   |--- value: [-0.19]
+|   |   |   |   |--- achievements >  96.00
+|   |   |   |   |   |--- price_final <= 74.00
+|   |   |   |   |   |   |--- value: [-0.80]
+|   |   |   |   |   |--- price_final >  74.00
+|   |   |   |   |   |   |--- value: [-0.80]
+|   |   |--- category_Camera Comfort >  0.50
+|   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |--- value: [-0.17]
+|   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |--- value: [-0.80]
+|--- genre_Software Training >  0.50
+|   |--- price_final <= 1467.50
+|   |   |--- value: [0.42]
+|   |--- price_final >  1467.50
+|   |   |--- genre_Utilities <= 0.50
+|   |   |   |--- value: [0.00]
+|   |   |--- genre_Utilities >  0.50
+|   |   |   |--- value: [-0.80]

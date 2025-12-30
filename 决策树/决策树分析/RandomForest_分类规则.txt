@@ -1,0 +1,966 @@
+模型: RandomForest
+训练准确率: 0.9912
+测试准确率: 0.4419
+性能指标（训练+测试）/2: 0.7166
+性能排名: 2
+聚类标签: [0, 1, 2, 3, 4]
+训练样本数量: 3175
+测试样本数量: 353
+最优参数: n_estimators=250, max_depth=40
+          min_samples_split=2, min_samples_leaf=1
+          max_features=None
+========================================================================================================================
+
+特征重要性（前50个特征）:
+========================================================================================================================
+achievements: 0.086624
+is_free: 0.084496
+supported_languages: 0.070254
+price_initial: 0.069218
+price_final: 0.065399
+max_age_rating: 0.054393
+category_Steam Trading Cards: 0.037444
+genre_Adventure: 0.026753
+genre_Casual: 0.026132
+dlc: 0.026062
+genre_Indie: 0.023973
+genre_Action: 0.023587
+has_dejus_rating: 0.022249
+genre_Strategy: 0.020926
+genre_Simulation: 0.019041
+genre_RPG: 0.017982
+platforms_mac: 0.017593
+price_discount_percent: 0.017455
+has_violence_content: 0.017086
+is_mainstream_publisher: 0.016195
+category_Steam Cloud: 0.016013
+category_Partial Controller Support: 0.014717
+has_vr_support: 0.012750
+is_mainstream_developer: 0.012685
+genre_Early Access: 0.012637
+category_Steam Achievements: 0.012631
+platforms_linux: 0.011288
+category_Steam Leaderboards: 0.009429
+category_Multi-player: 0.007369
+has_esrb_rating: 0.007256
+controller_support: 0.007034
+category_Full controller support: 0.007009
+controller_support_binary: 0.006814
+genre_Sports: 0.006517
+banned_in_germany: 0.005883
+has_pegi_rating: 0.005700
+category_Stats: 0.005294
+genre_Racing: 0.005145
+category_PvP: 0.005090
+category_Remote Play Together: 0.004932
+category_Co-op: 0.004644
+category_Single-player: 0.004535
+category_Online PvP: 0.004420
+support_english_0.0: 0.004046
+category_Online Co-op: 0.003830
+support_english_1.0: 0.003765
+category_Shared/Split Screen: 0.003543
+category_Shared/Split Screen Co-op: 0.003348
+genre_Free To Play: 0.002905
+category_Shared/Split Screen PvP: 0.002869
+
+
+第一棵树的完整规则（共250棵树）:
+========================================================================================================================
+
+============================================================ 第一棵树 ============================================================
+|--- is_free <= 0.50
+|   |--- category_Steam Trading Cards <= 0.50
+|   |   |--- price_initial <= 1467.50
+|   |   |   |--- achievements <= 2.50
+|   |   |   |   |--- price_discount_percent <= 34.00
+|   |   |   |   |   |--- genre_Simulation <= 0.50
+|   |   |   |   |   |   |--- dlc <= 0.50
+|   |   |   |   |   |   |   |--- supported_languages <= 3.50
+|   |   |   |   |   |   |   |   |--- category_Remote Play on Tablet <= 0.50
+|   |   |   |   |   |   |   |   |   |--- price_final <= 499.50
+|   |   |   |   |   |   |   |   |   |   |--- supported_languages <= 1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 23
+|   |   |   |   |   |   |   |   |   |   |--- supported_languages >  1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |--- price_final >  499.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Sports <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 16
+|   |   |   |   |   |   |   |   |   |   |--- genre_Sports >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- category_Remote Play on Tablet >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- supported_languages >  3.50
+|   |   |   |   |   |   |   |   |--- price_final <= 949.00
+|   |   |   |   |   |   |   |   |   |--- category_LAN PvP <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- is_mainstream_developer <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |   |--- is_mainstream_developer >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- category_LAN PvP >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- price_final >  949.00
+|   |   |   |   |   |   |   |   |   |--- has_violence_content <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- category_In-App Purchases <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- category_In-App Purchases >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- has_violence_content >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- is_mainstream_publisher <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- is_mainstream_publisher >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- dlc >  0.50
+|   |   |   |   |   |   |   |--- genre_Casual <= 0.50
+|   |   |   |   |   |   |   |   |--- dlc <= 1.50
+|   |   |   |   |   |   |   |   |   |--- platforms_mac <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- support_english_0.0 <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- support_english_0.0 >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- platforms_mac >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- category_Steam Workshop <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |   |--- category_Steam Workshop >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |--- dlc >  1.50
+|   |   |   |   |   |   |   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- genre_Casual >  0.50
+|   |   |   |   |   |   |   |   |--- category_Steam Cloud <= 0.50
+|   |   |   |   |   |   |   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating <= 6.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating >  6.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |--- category_Steam Cloud >  0.50
+|   |   |   |   |   |   |   |   |   |--- category_Online PvP <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |--- category_Online PvP >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- genre_Simulation >  0.50
+|   |   |   |   |   |   |--- supported_languages <= 6.50
+|   |   |   |   |   |   |   |--- has_violence_content <= 0.50
+|   |   |   |   |   |   |   |   |--- category_Steam Workshop <= 0.50
+|   |   |   |   |   |   |   |   |   |--- price_initial <= 984.00
+|   |   |   |   |   |   |   |   |   |   |--- price_final <= 849.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |   |   |--- price_final >  849.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- price_initial >  984.00
+|   |   |   |   |   |   |   |   |   |   |--- genre_Casual <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |   |--- genre_Casual >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- category_Steam Workshop >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- has_violence_content >  0.50
+|   |   |   |   |   |   |   |   |--- genre_RPG <= 0.50
+|   |   |   |   |   |   |   |   |   |--- dlc <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- platforms_mac <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- platforms_mac >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |--- dlc >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating <= 11.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating >  11.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |--- genre_RPG >  0.50
+|   |   |   |   |   |   |   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating <= 14.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating >  14.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |--- supported_languages >  6.50
+|   |   |   |   |   |   |   |--- genre_Strategy <= 0.50
+|   |   |   |   |   |   |   |   |--- category_Full controller support <= 0.50
+|   |   |   |   |   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_RPG <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |   |--- genre_RPG >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- supported_languages <= 18.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |   |--- supported_languages >  18.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |--- category_Full controller support >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- genre_Strategy >  0.50
+|   |   |   |   |   |   |   |   |--- supported_languages <= 11.00
+|   |   |   |   |   |   |   |   |   |--- price_final <= 399.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- price_final >  399.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |--- supported_languages >  11.00
+|   |   |   |   |   |   |   |   |   |--- genre_Early Access <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- price_initial <= 599.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |   |--- price_initial >  599.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |--- genre_Early Access >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |--- price_discount_percent >  34.00
+|   |   |   |   |   |--- genre_Action <= 0.50
+|   |   |   |   |   |   |--- dlc <= 0.50
+|   |   |   |   |   |   |   |--- has_vr_support <= 0.50
+|   |   |   |   |   |   |   |   |--- required_age <= 9.00
+|   |   |   |   |   |   |   |   |   |--- price_discount_percent <= 77.00
+|   |   |   |   |   |   |   |   |   |   |--- price_initial <= 799.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- price_initial >  799.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |   |--- price_discount_percent >  77.00
+|   |   |   |   |   |   |   |   |   |   |--- price_initial <= 449.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |   |--- price_initial >  449.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- required_age >  9.00
+|   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |--- has_vr_support >  0.50
+|   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |--- dlc >  0.50
+|   |   |   |   |   |   |   |--- category_Cross-Platform Multiplayer <= 0.50
+|   |   |   |   |   |   |   |   |--- genre_Simulation <= 0.50
+|   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |--- genre_Simulation >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |--- category_Cross-Platform Multiplayer >  0.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- genre_Action >  0.50
+|   |   |   |   |   |   |--- price_discount_percent <= 58.00
+|   |   |   |   |   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |   |   |   |   |--- category_Shared/Split Screen <= 0.50
+|   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |--- category_Shared/Split Screen >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |   |   |   |   |--- genre_RPG <= 0.50
+|   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- genre_RPG >  0.50
+|   |   |   |   |   |   |   |   |   |--- max_age_rating <= 14.00
+|   |   |   |   |   |   |   |   |   |   |--- genre_Casual <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |   |   |--- genre_Casual >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- max_age_rating >  14.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- price_discount_percent >  58.00
+|   |   |   |   |   |   |   |--- price_discount_percent <= 85.50
+|   |   |   |   |   |   |   |   |--- has_vr_support <= 0.50
+|   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |--- has_vr_support >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- price_discount_percent >  85.50
+|   |   |   |   |   |   |   |   |--- category_Shared/Split Screen PvP <= 0.50
+|   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- category_Shared/Split Screen PvP >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |--- achievements >  2.50
+|   |   |   |   |--- max_age_rating <= 16.50
+|   |   |   |   |   |--- has_dejus_rating <= 0.50
+|   |   |   |   |   |   |--- price_initial <= 49.50
+|   |   |   |   |   |   |   |--- controller_support <= 0.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- controller_support >  0.50
+|   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |--- price_initial >  49.50
+|   |   |   |   |   |   |   |--- achievements <= 36.50
+|   |   |   |   |   |   |   |   |--- has_vr_support <= 0.50
+|   |   |   |   |   |   |   |   |   |--- price_initial <= 449.00
+|   |   |   |   |   |   |   |   |   |   |--- supported_languages <= 2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- supported_languages >  2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |--- price_initial >  449.00
+|   |   |   |   |   |   |   |   |   |   |--- has_violence_content <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- has_violence_content >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- has_vr_support >  0.50
+|   |   |   |   |   |   |   |   |   |--- category_Family Sharing <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |--- category_Family Sharing >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- supported_languages <= 1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- supported_languages >  1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |--- achievements >  36.50
+|   |   |   |   |   |   |   |   |--- genre_Simulation <= 0.50
+|   |   |   |   |   |   |   |   |   |--- achievements <= 104.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |--- achievements >  104.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |--- genre_Simulation >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |--- has_dejus_rating >  0.50
+|   |   |   |   |   |   |--- is_mainstream_publisher <= 0.50
+|   |   |   |   |   |   |   |--- genre_Simulation <= 0.50
+|   |   |   |   |   |   |   |   |--- achievements <= 262.50
+|   |   |   |   |   |   |   |   |   |--- genre_RPG <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- category_Online PvP <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 22
+|   |   |   |   |   |   |   |   |   |   |--- category_Online PvP >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |--- genre_RPG >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating <= 12.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating >  12.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- achievements >  262.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- genre_Simulation >  0.50
+|   |   |   |   |   |   |   |   |--- support_english_1.0 <= 0.50
+|   |   |   |   |   |   |   |   |   |--- genre_Casual <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |--- genre_Casual >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- support_english_1.0 >  0.50
+|   |   |   |   |   |   |   |   |   |--- price_discount_percent <= 5.00
+|   |   |   |   |   |   |   |   |   |   |--- genre_Early Access <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- genre_Early Access >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- price_discount_percent >  5.00
+|   |   |   |   |   |   |   |   |   |   |--- supported_languages <= 1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |   |   |--- supported_languages >  1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |--- is_mainstream_publisher >  0.50
+|   |   |   |   |   |   |   |--- category_Steam Leaderboards <= 0.50
+|   |   |   |   |   |   |   |   |--- max_age_rating <= 15.50
+|   |   |   |   |   |   |   |   |   |--- genre_RPG <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- price_initial <= 1349.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- price_initial >  1349.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |--- genre_RPG >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Casual <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- genre_Casual >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- max_age_rating >  15.50
+|   |   |   |   |   |   |   |   |   |--- achievements <= 19.00
+|   |   |   |   |   |   |   |   |   |   |--- price_discount_percent <= 25.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |   |--- price_discount_percent >  25.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |--- achievements >  19.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- category_Steam Leaderboards >  0.50
+|   |   |   |   |   |   |   |   |--- achievements <= 35.00
+|   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |--- achievements >  35.00
+|   |   |   |   |   |   |   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |--- max_age_rating >  16.50
+|   |   |   |   |   |--- price_discount_percent <= 72.50
+|   |   |   |   |   |   |--- supported_languages <= 1.50
+|   |   |   |   |   |   |   |--- achievements <= 33.50
+|   |   |   |   |   |   |   |   |--- is_mainstream_developer <= 0.50
+|   |   |   |   |   |   |   |   |   |--- banned_in_germany <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |--- banned_in_germany >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- price_final <= 349.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |   |--- price_final >  349.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- is_mainstream_developer >  0.50
+|   |   |   |   |   |   |   |   |   |--- price_discount_percent <= 35.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |--- price_discount_percent >  35.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |--- achievements >  33.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- supported_languages >  1.50
+|   |   |   |   |   |   |   |--- category_Steam Achievements <= 0.50
+|   |   |   |   |   |   |   |   |--- price_final <= 849.00
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- price_final >  849.00
+|   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |--- category_Steam Achievements >  0.50
+|   |   |   |   |   |   |   |   |--- platforms_linux <= 0.50
+|   |   |   |   |   |   |   |   |   |--- dlc <= 1.50
+|   |   |   |   |   |   |   |   |   |   |--- category_Single-player <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |   |--- category_Single-player >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |--- dlc >  1.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- platforms_linux >  0.50
+|   |   |   |   |   |   |   |   |   |--- is_mainstream_developer <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |--- is_mainstream_developer >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |--- price_discount_percent >  72.50
+|   |   |   |   |   |   |--- class: 4.0
+|   |   |--- price_initial >  1467.50
+|   |   |   |--- supported_languages <= 2.50
+|   |   |   |   |--- achievements <= 11.50
+|   |   |   |   |   |--- price_final <= 2249.00
+|   |   |   |   |   |   |--- price_discount_percent <= 77.50
+|   |   |   |   |   |   |   |--- price_discount_percent <= 32.50
+|   |   |   |   |   |   |   |   |--- genre_Strategy <= 0.50
+|   |   |   |   |   |   |   |   |   |--- has_esrb_rating <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- has_dejus_rating <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- has_dejus_rating >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |--- has_esrb_rating >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating <= 15.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating >  15.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |--- genre_Strategy >  0.50
+|   |   |   |   |   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- achievements <= 1.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- achievements >  1.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |--- price_discount_percent >  32.50
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- price_discount_percent >  77.50
+|   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |--- price_final >  2249.00
+|   |   |   |   |   |   |--- genre_Early Access <= 0.50
+|   |   |   |   |   |   |   |--- price_initial <= 3749.00
+|   |   |   |   |   |   |   |   |--- supported_languages <= 1.50
+|   |   |   |   |   |   |   |   |   |--- genre_Action <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- genre_Action >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating <= 14.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating >  14.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- supported_languages >  1.50
+|   |   |   |   |   |   |   |   |   |--- has_violence_content <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- has_violence_content >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating <= 14.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating >  14.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |--- price_initial >  3749.00
+|   |   |   |   |   |   |   |   |--- price_initial <= 4499.00
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- price_initial >  4499.00
+|   |   |   |   |   |   |   |   |   |--- has_dejus_rating <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |--- has_dejus_rating >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |--- genre_Early Access >  0.50
+|   |   |   |   |   |   |   |--- price_final <= 2749.00
+|   |   |   |   |   |   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |   |   |   |   |   |--- genre_Action <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |   |--- genre_Action >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |--- price_final >  2749.00
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |--- achievements >  11.50
+|   |   |   |   |   |--- category_Stats <= 0.50
+|   |   |   |   |   |   |--- support_english_0.0 <= 0.50
+|   |   |   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |   |   |--- achievements <= 25.00
+|   |   |   |   |   |   |   |   |   |--- max_age_rating <= 10.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |--- max_age_rating >  10.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |--- achievements >  25.00
+|   |   |   |   |   |   |   |   |   |--- category_Steam Cloud <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Early Access <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |   |--- genre_Early Access >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- category_Steam Cloud >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |   |   |--- achievements <= 30.50
+|   |   |   |   |   |   |   |   |   |--- achievements <= 21.50
+|   |   |   |   |   |   |   |   |   |   |--- category_Mouse Only Option <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- category_Mouse Only Option >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- achievements >  21.50
+|   |   |   |   |   |   |   |   |   |   |--- platforms_linux <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- platforms_linux >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- achievements >  30.50
+|   |   |   |   |   |   |   |   |   |--- price_initial <= 1549.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |   |--- price_initial >  1549.00
+|   |   |   |   |   |   |   |   |   |   |--- genre_Strategy <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |   |--- genre_Strategy >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |--- support_english_0.0 >  0.50
+|   |   |   |   |   |   |   |--- genre_Simulation <= 0.50
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- genre_Simulation >  0.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- category_Stats >  0.50
+|   |   |   |   |   |   |--- category_Steam Cloud <= 0.50
+|   |   |   |   |   |   |   |--- price_initial <= 1999.00
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- price_initial >  1999.00
+|   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |--- category_Steam Cloud >  0.50
+|   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |--- supported_languages >  2.50
+|   |   |   |   |--- achievements <= 28.00
+|   |   |   |   |   |--- price_final <= 1449.00
+|   |   |   |   |   |   |--- supported_languages <= 12.50
+|   |   |   |   |   |   |   |--- genre_Strategy <= 0.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- genre_Strategy >  0.50
+|   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |--- supported_languages >  12.50
+|   |   |   |   |   |   |   |--- category_Steam Achievements <= 0.50
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- category_Steam Achievements >  0.50
+|   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |--- price_final >  1449.00
+|   |   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |   |--- is_mainstream_developer <= 0.50
+|   |   |   |   |   |   |   |   |--- price_final <= 1749.00
+|   |   |   |   |   |   |   |   |   |--- genre_Racing <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating <= 11.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating >  11.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- genre_Racing >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |--- price_final >  1749.00
+|   |   |   |   |   |   |   |   |   |--- category_Steam Workshop <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Action <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- genre_Action >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- category_Steam Workshop >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- is_mainstream_developer >  0.50
+|   |   |   |   |   |   |   |   |--- achievements <= 24.50
+|   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- achievements >  24.50
+|   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |   |--- category_Steam Workshop <= 0.50
+|   |   |   |   |   |   |   |   |--- price_initial <= 11999.00
+|   |   |   |   |   |   |   |   |   |--- is_mainstream_developer <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- category_Steam Leaderboards <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- category_Steam Leaderboards >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- is_mainstream_developer >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |--- price_initial >  11999.00
+|   |   |   |   |   |   |   |   |   |--- genre_Sports <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |--- genre_Sports >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- category_Steam Workshop >  0.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |--- achievements >  28.00
+|   |   |   |   |   |--- category_Shared/Split Screen <= 0.50
+|   |   |   |   |   |   |--- category_Stats <= 0.50
+|   |   |   |   |   |   |   |--- supported_languages <= 64.00
+|   |   |   |   |   |   |   |   |--- max_age_rating <= 18.50
+|   |   |   |   |   |   |   |   |   |--- supported_languages <= 12.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- supported_languages >  12.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- max_age_rating >  18.50
+|   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- supported_languages >  64.00
+|   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |--- category_Stats >  0.50
+|   |   |   |   |   |   |   |--- max_age_rating <= 7.00
+|   |   |   |   |   |   |   |   |--- achievements <= 32.50
+|   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |--- achievements >  32.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- max_age_rating >  7.00
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |--- category_Shared/Split Screen >  0.50
+|   |   |   |   |   |   |--- class: 4.0
+|   |--- category_Steam Trading Cards >  0.50
+|   |   |--- price_final <= 1249.00
+|   |   |   |--- has_dejus_rating <= 0.50
+|   |   |   |   |--- price_final <= 549.00
+|   |   |   |   |   |--- supported_languages <= 8.50
+|   |   |   |   |   |   |--- category_PvP <= 0.50
+|   |   |   |   |   |   |   |--- achievements <= 7.00
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- achievements >  7.00
+|   |   |   |   |   |   |   |   |--- achievements <= 11.00
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- achievements >  11.00
+|   |   |   |   |   |   |   |   |   |--- price_final <= 97.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |--- price_final >  97.00
+|   |   |   |   |   |   |   |   |   |   |--- genre_Action <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- genre_Action >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |--- category_PvP >  0.50
+|   |   |   |   |   |   |   |--- genre_Casual <= 0.50
+|   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |--- genre_Casual >  0.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- supported_languages >  8.50
+|   |   |   |   |   |   |--- genre_Casual <= 0.50
+|   |   |   |   |   |   |   |--- supported_languages <= 11.00
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- supported_languages >  11.00
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- genre_Casual >  0.50
+|   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |--- price_final >  549.00
+|   |   |   |   |   |--- achievements <= 14.50
+|   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |--- achievements >  14.50
+|   |   |   |   |   |   |--- price_final <= 899.00
+|   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |--- price_final >  899.00
+|   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |--- has_dejus_rating >  0.50
+|   |   |   |   |--- platforms_linux <= 0.50
+|   |   |   |   |   |--- achievements <= 54.00
+|   |   |   |   |   |   |--- category_Steam Leaderboards <= 0.50
+|   |   |   |   |   |   |   |--- dlc <= 1.50
+|   |   |   |   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |   |   |   |--- price_initial <= 649.00
+|   |   |   |   |   |   |   |   |   |   |--- dlc <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- dlc >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- price_initial >  649.00
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating <= 17.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |   |--- max_age_rating >  17.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |   |   |   |--- achievements <= 7.00
+|   |   |   |   |   |   |   |   |   |   |--- price_initial <= 349.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- price_initial >  349.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- achievements >  7.00
+|   |   |   |   |   |   |   |   |   |   |--- genre_Racing <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- genre_Racing >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |--- dlc >  1.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- category_Steam Leaderboards >  0.50
+|   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- achievements >  54.00
+|   |   |   |   |   |   |--- price_discount_percent <= 58.00
+|   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- price_discount_percent >  58.00
+|   |   |   |   |   |   |   |--- price_final <= 136.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- price_final >  136.50
+|   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |--- platforms_linux >  0.50
+|   |   |   |   |   |--- price_final <= 91.00
+|   |   |   |   |   |   |--- category_Remote Play on Tablet <= 0.50
+|   |   |   |   |   |   |   |--- price_discount_percent <= 72.50
+|   |   |   |   |   |   |   |   |--- category_PvP <= 0.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- category_PvP >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- price_discount_percent >  72.50
+|   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |--- category_Remote Play on Tablet >  0.50
+|   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |--- price_final >  91.00
+|   |   |   |   |   |   |--- price_final <= 1096.50
+|   |   |   |   |   |   |   |--- category_Shared/Split Screen Co-op <= 0.50
+|   |   |   |   |   |   |   |   |--- category_Captions available <= 0.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- category_Captions available >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |--- category_Shared/Split Screen Co-op >  0.50
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- price_final >  1096.50
+|   |   |   |   |   |   |   |--- genre_Early Access <= 0.50
+|   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |--- genre_Early Access >  0.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |--- price_final >  1249.00
+|   |   |   |--- achievements <= 19.00
+|   |   |   |   |--- dlc <= 0.50
+|   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |--- price_final <= 2249.00
+|   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- price_final >  2249.00
+|   |   |   |   |   |   |   |--- category_Steam Cloud <= 0.50
+|   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |--- category_Steam Cloud >  0.50
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |--- platforms_linux <= 0.50
+|   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |--- platforms_linux >  0.50
+|   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |--- dlc >  0.50
+|   |   |   |   |   |--- achievements <= 16.50
+|   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- achievements >  16.50
+|   |   |   |   |   |   |--- class: 2.0
+|   |   |   |--- achievements >  19.00
+|   |   |   |   |--- genre_Sports <= 0.50
+|   |   |   |   |   |--- genre_Free To Play <= 0.50
+|   |   |   |   |   |   |--- has_vr_support <= 0.50
+|   |   |   |   |   |   |   |--- category_Steam Leaderboards <= 0.50
+|   |   |   |   |   |   |   |   |--- category_HDR available <= 0.50
+|   |   |   |   |   |   |   |   |   |--- category_PvP <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- price_final <= 4499.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |   |--- price_final >  4499.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- category_PvP >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- price_initial <= 1949.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |   |--- price_initial >  1949.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- category_HDR available >  0.50
+|   |   |   |   |   |   |   |   |   |--- category_Partial Controller Support <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- category_Partial Controller Support >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |--- category_Steam Leaderboards >  0.50
+|   |   |   |   |   |   |   |   |--- price_final <= 1699.00
+|   |   |   |   |   |   |   |   |   |--- category_Remote Play on TV <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- achievements <= 35.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |   |--- achievements >  35.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- category_Remote Play on TV >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |--- price_final >  1699.00
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- has_vr_support >  0.50
+|   |   |   |   |   |   |   |--- is_mainstream_publisher <= 0.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- is_mainstream_publisher >  0.50
+|   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |--- genre_Free To Play >  0.50
+|   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |--- genre_Sports >  0.50
+|   |   |   |   |   |--- achievements <= 32.00
+|   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |--- achievements >  32.00
+|   |   |   |   |   |   |--- class: 2.0
+|--- is_free >  0.50
+|   |--- category_Steam Trading Cards <= 0.50
+|   |   |--- dlc <= 0.50
+|   |   |   |--- has_dejus_rating <= 0.50
+|   |   |   |   |--- genre_RPG <= 0.50
+|   |   |   |   |   |--- controller_support_binary <= 0.50
+|   |   |   |   |   |   |--- genre_Strategy <= 0.50
+|   |   |   |   |   |   |   |--- achievements <= 20.50
+|   |   |   |   |   |   |   |   |--- is_mainstream_publisher <= 0.50
+|   |   |   |   |   |   |   |   |   |--- genre_Simulation <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- genre_Simulation >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Indie <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- genre_Indie >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- is_mainstream_publisher >  0.50
+|   |   |   |   |   |   |   |   |   |--- category_Steam Cloud <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |   |--- category_Steam Cloud >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |--- achievements >  20.50
+|   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |--- genre_Strategy >  0.50
+|   |   |   |   |   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |   |   |   |   |--- category_Co-op <= 0.50
+|   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |--- category_Co-op >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |--- controller_support_binary >  0.50
+|   |   |   |   |   |   |--- category_Cross-Platform Multiplayer <= 0.50
+|   |   |   |   |   |   |   |--- platforms_mac <= 0.50
+|   |   |   |   |   |   |   |   |--- achievements <= 5.00
+|   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |--- achievements >  5.00
+|   |   |   |   |   |   |   |   |   |--- genre_Free To Play <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |--- genre_Free To Play >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |--- platforms_mac >  0.50
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- category_Cross-Platform Multiplayer >  0.50
+|   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |--- genre_RPG >  0.50
+|   |   |   |   |   |--- genre_Early Access <= 0.50
+|   |   |   |   |   |   |--- category_Multi-player <= 0.50
+|   |   |   |   |   |   |   |--- genre_Action <= 0.50
+|   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |--- genre_Action >  0.50
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- category_Multi-player >  0.50
+|   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |--- genre_Early Access >  0.50
+|   |   |   |   |   |   |--- class: 0.0
+|   |   |   |--- has_dejus_rating >  0.50
+|   |   |   |   |--- category_Adjustable Text Size <= 0.50
+|   |   |   |   |   |--- category_Steam Achievements <= 0.50
+|   |   |   |   |   |   |--- category_Steam Leaderboards <= 0.50
+|   |   |   |   |   |   |   |--- genre_Massively Multiplayer <= 0.50
+|   |   |   |   |   |   |   |   |--- supported_languages <= 66.00
+|   |   |   |   |   |   |   |   |   |--- platforms_mac <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Strategy <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- genre_Strategy >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- platforms_mac >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Simulation <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- genre_Simulation >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- supported_languages >  66.00
+|   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |--- genre_Massively Multiplayer >  0.50
+|   |   |   |   |   |   |   |   |--- category_In-App Purchases <= 0.50
+|   |   |   |   |   |   |   |   |   |--- category_Online PvP <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |   |--- category_Online PvP >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Strategy <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |   |   |--- genre_Strategy >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- category_In-App Purchases >  0.50
+|   |   |   |   |   |   |   |   |   |--- genre_RPG <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- genre_RPG >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |--- category_Steam Leaderboards >  0.50
+|   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |--- category_Steam Achievements >  0.50
+|   |   |   |   |   |   |--- genre_Free To Play <= 0.50
+|   |   |   |   |   |   |   |--- achievements <= 9.00
+|   |   |   |   |   |   |   |   |--- genre_Casual <= 0.50
+|   |   |   |   |   |   |   |   |   |--- supported_languages <= 1.50
+|   |   |   |   |   |   |   |   |   |   |--- has_violence_content <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |   |--- has_violence_content >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |   |--- supported_languages >  1.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |--- genre_Casual >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |--- achievements >  9.00
+|   |   |   |   |   |   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |   |   |   |   |   |--- genre_Strategy <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- genre_Strategy >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- genre_Free To Play >  0.50
+|   |   |   |   |   |   |   |--- genre_Sports <= 0.50
+|   |   |   |   |   |   |   |   |--- has_esrb_rating <= 0.50
+|   |   |   |   |   |   |   |   |   |--- platforms_linux <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |--- platforms_linux >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- genre_Simulation <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |   |   |   |--- genre_Simulation >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- has_esrb_rating >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |--- genre_Sports >  0.50
+|   |   |   |   |   |   |   |   |--- genre_Simulation <= 0.50
+|   |   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |   |--- genre_Simulation >  0.50
+|   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |--- category_Adjustable Text Size >  0.50
+|   |   |   |   |   |--- class: 3.0
+|   |   |--- dlc >  0.50
+|   |   |   |--- genre_Action <= 0.50
+|   |   |   |   |--- category_Mouse Only Option <= 0.50
+|   |   |   |   |   |--- genre_Strategy <= 0.50
+|   |   |   |   |   |   |--- is_mainstream_developer <= 0.50
+|   |   |   |   |   |   |   |--- genre_RPG <= 0.50
+|   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |   |   |--- genre_RPG >  0.50
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- is_mainstream_developer >  0.50
+|   |   |   |   |   |   |   |--- genre_RPG <= 0.50
+|   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |--- genre_RPG >  0.50
+|   |   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |--- genre_Strategy >  0.50
+|   |   |   |   |   |   |--- category_PvP <= 0.50
+|   |   |   |   |   |   |   |--- max_age_rating <= 6.00
+|   |   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |   |--- max_age_rating >  6.00
+|   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |--- category_PvP >  0.50
+|   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |--- category_Mouse Only Option >  0.50
+|   |   |   |   |   |--- support_english_1.0 <= 0.50
+|   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |--- support_english_1.0 >  0.50
+|   |   |   |   |   |   |--- max_age_rating <= 6.00
+|   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |--- max_age_rating >  6.00
+|   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |--- genre_Action >  0.50
+|   |   |   |   |--- genre_Adventure <= 0.50
+|   |   |   |   |   |--- max_age_rating <= 17.00
+|   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |--- max_age_rating >  17.00
+|   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |--- genre_Adventure >  0.50
+|   |   |   |   |   |--- category_Partial Controller Support <= 0.50
+|   |   |   |   |   |   |--- category_PvP <= 0.50
+|   |   |   |   |   |   |   |--- class: 4.0
+|   |   |   |   |   |   |--- category_PvP >  0.50
+|   |   |   |   |   |   |   |--- class: 0.0
+|   |   |   |   |   |--- category_Partial Controller Support >  0.50
+|   |   |   |   |   |   |--- achievements <= 4.50
+|   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- achievements >  4.50
+|   |   |   |   |   |   |   |--- class: 0.0
+|   |--- category_Steam Trading Cards >  0.50
+|   |   |--- max_age_rating <= 17.00
+|   |   |   |--- category_Cross-Platform Multiplayer <= 0.50
+|   |   |   |   |--- class: 2.0
+|   |   |   |--- category_Cross-Platform Multiplayer >  0.50
+|   |   |   |   |--- class: 3.0
+|   |   |--- max_age_rating >  17.00
+|   |   |   |--- class: 1.0

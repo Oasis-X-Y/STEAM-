@@ -1,0 +1,216 @@
+模型: XGBoost
+训练准确率: 0.9912
+测试准确率: 0.4504
+性能指标（训练+测试）/2: 0.7208
+性能排名: 1
+聚类标签: [0, 1, 2, 3, 4]
+训练样本数量: 3175
+测试样本数量: 353
+========================================================================================================================
+
+特征重要性（前50个特征）:
+========================================================================================================================
+is_free: 0.176998
+category_Steam Trading Cards: 0.057374
+category_Adjustable Text Size: 0.046062
+genre_Gore: 0.039212
+category_Surround Sound: 0.023370
+category_Adjustable Difficulty: 0.020867
+genre_Education: 0.018123
+category_LAN PvP: 0.016249
+genre_Video Production: 0.014146
+category_Captions available: 0.013269
+category_Includes level editor: 0.013252
+category_LAN Co-op: 0.013211
+genre_Animation & Modeling: 0.012958
+dlc: 0.012609
+category_MMO: 0.011578
+required_age: 0.011244
+category_Stereo Sound: 0.011109
+category_Shared/Split Screen Co-op: 0.010974
+category_Touch Only Option: 0.010715
+category_Steam Leaderboards: 0.010284
+genre_Software Training: 0.010217
+category_Cross-Platform Multiplayer: 0.009687
+category_Shared/Split Screen: 0.009680
+genre_Utilities: 0.009537
+has_esrb_rating: 0.009523
+price_discount_percent: 0.009429
+category_Remote Play on Phone: 0.009392
+support_english_0.0: 0.009320
+category_Remote Play Together: 0.009106
+category_Custom Volume Controls: 0.008891
+genre_RPG: 0.008801
+controller_support: 0.008765
+category_Online Co-op: 0.008614
+support_english_1.0: 0.008439
+category_Online PvP: 0.008408
+category_Partial Controller Support: 0.008289
+has_dejus_rating: 0.008024
+genre_Game Development: 0.007897
+has_pegi_rating: 0.007805
+category_Steam Cloud: 0.007771
+category_Shared/Split Screen PvP: 0.007758
+category_Color Alternatives: 0.007756
+category_Camera Comfort: 0.007696
+category_Stats: 0.007593
+supported_languages: 0.007561
+achievements: 0.007410
+banned_in_germany: 0.007299
+price_initial: 0.007245
+category_Co-op: 0.007167
+platforms_linux: 0.007160
+
+
+正中间树的完整结构（共1250棵树）:
+========================================================================================================================
+
+============================================================ 正中间树（第626棵，共1250棵） ============================================================
+0:[price_discount_percent<43] yes=1,no=2,missing=2
+	1:[price_initial<99] yes=3,no=4,missing=4
+		3:[genre_Adventure<1] yes=5,no=6,missing=6
+			5:[category_Multi-player<1] yes=9,no=10,missing=10
+				9:[achievements<20] yes=15,no=16,missing=16
+15:[platforms_linux] yes=23,no=24
+						23:[max_age_rating<3] yes=31,no=32,missing=32
+							31:[genre_Indie<1] yes=41,no=42,missing=42
+								41:leaf=0.00644814176
+								42:[genre_Casual<1] yes=55,no=56,missing=56
+									55:[genre_Strategy<1] yes=59,no=60,missing=60
+										59:leaf=0.00376657583
+										60:leaf=-0.00347853452
+									56:leaf=-0.0124294264
+							32:[genre_Casual<1] yes=43,no=44,missing=44
+								43:leaf=0.0171698835
+								44:leaf=0.020441357
+						24:leaf=-0.0196701884
+					16:leaf=0.0175233483
+				10:[genre_Action<1] yes=17,no=18,missing=18
+					17:leaf=0.00355801103
+					18:leaf=-0.0201546811
+			6:[category_Multi-player<1] yes=11,no=12,missing=12
+				11:[category_Steam Achievements<1] yes=19,no=20,missing=20
+					19:[category_Partial Controller Support<1] yes=25,no=26,missing=26
+						25:leaf=0.0126349805
+						26:leaf=-0.00389560009
+					20:leaf=-0.00458051777
+				12:leaf=0.0297219697
+		4:[genre_Utilities<1] yes=7,no=8,missing=8
+			7:[category_Family Sharing<1] yes=13,no=14,missing=14
+				13:leaf=-0.0110232923
+				14:[category_Steam Cloud<1] yes=21,no=22,missing=22
+21:[support_english_0.0] yes=27,no=28
+						27:[category_Single-player<1] yes=33,no=34,missing=34
+							33:[has_violence_content<1] yes=45,no=46,missing=46
+								45:leaf=-0.00404641964
+								46:leaf=0.0182791855
+							34:[category_Online PvP<1] yes=47,no=48,missing=48
+								47:[price_initial<200] yes=57,no=58,missing=58
+									57:[is_mainstream_publisher<1] yes=61,no=62,missing=62
+										61:[controller_support<1] yes=65,no=66,missing=66
+											65:[genre_Casual<1] yes=71,no=72,missing=72
+												71:[genre_Strategy<1] yes=77,no=78,missing=78
+													77:[max_age_rating<15] yes=89,no=90,missing=90
+														89:[has_dejus_rating<1] yes=101,no=102,missing=102
+															101:leaf=0.0021450913
+															102:leaf=-0.0215477459
+														90:leaf=0.00571845239
+													78:leaf=-0.0198507663
+												72:[achievements<7] yes=79,no=80,missing=80
+													79:[supported_languages<2] yes=91,no=92,missing=92
+														91:[genre_Adventure<1] yes=103,no=104,missing=104
+															103:[price_initial<100] yes=109,no=110,missing=110
+																109:[has_violence_content<1] yes=115,no=116,missing=116
+																	115:leaf=-0.00649732212
+																	116:leaf=0.00154496287
+																110:[genre_Simulation<1] yes=117,no=118,missing=118
+																	117:leaf=0.00193894503
+																	118:leaf=0.00925993081
+															104:leaf=-0.0138809904
+														92:leaf=0.00874559488
+													80:leaf=-0.00917293131
+											66:leaf=0.0152617041
+										62:leaf=-0.0107984934
+									58:[category_Co-op<1] yes=63,no=64,missing=64
+										63:[price_final<1000] yes=67,no=68,missing=68
+											67:[genre_Early Access<1] yes=73,no=74,missing=74
+												73:[achievements<16] yes=81,no=82,missing=82
+													81:[achievements<7] yes=93,no=94,missing=94
+														93:[category_Partial Controller Support<1] yes=105,no=106,missing=106
+															105:[genre_Simulation<1] yes=111,no=112,missing=112
+																111:[max_age_rating<18] yes=119,no=120,missing=120
+																	119:[controller_support<1] yes=123,no=124,missing=124
+																		123:[genre_RPG<1] yes=125,no=126,missing=126
+																			125:[genre_Adventure<1] yes=127,no=128,missing=128
+																				127:[price_initial<300] yes=129,no=130,missing=130
+																					129:leaf=0.014359667
+																					130:[price_final<809] yes=133,no=134,missing=134
+																						133:[supported_languages<4] yes=137,no=138,missing=138
+																							137:[genre_Strategy<1] yes=141,no=142,missing=142
+																								141:[genre_Indie<1] yes=145,no=146,missing=146
+																									145:leaf=0.00532875676
+																									146:leaf=-0.0297096465
+																								142:leaf=0.0057290392
+138:[platforms_linux] yes=143,no=144
+																								143:leaf=0.00970608555
+																								144:leaf=0.00173600321
+																						134:leaf=0.0083471518
+																				128:[supported_languages<2] yes=131,no=132,missing=132
+																					131:[genre_Action<1] yes=135,no=136,missing=136
+																						135:[max_age_rating<3] yes=139,no=140,missing=140
+																							139:leaf=-0.00753800711
+																							140:leaf=-0.00114890921
+																						136:leaf=0.0195240285
+																					132:leaf=-0.0349670909
+																			126:leaf=0.0137040857
+																		124:leaf=-0.0105183208
+																	120:leaf=0.013050898
+																112:[genre_Casual<1] yes=121,no=122,missing=122
+																	121:leaf=-0.0208949354
+																	122:leaf=0.00181128981
+															106:leaf=-0.0128412042
+														94:[genre_Adventure<1] yes=107,no=108,missing=108
+															107:[achievements<10] yes=113,no=114,missing=114
+																113:leaf=0.0268699862
+																114:leaf=0.00663013896
+															108:leaf=-0.000667812245
+													82:[achievements<22] yes=95,no=96,missing=96
+														95:leaf=-0.0237620808
+														96:leaf=0.00364227337
+												74:[genre_Action<1] yes=83,no=84,missing=84
+													83:[genre_Casual<1] yes=97,no=98,missing=98
+														97:leaf=0.0294182189
+														98:leaf=0.00587348221
+													84:leaf=-0.00962952804
+											68:[price_final<1519] yes=75,no=76,missing=76
+												75:[has_violence_content<1] yes=85,no=86,missing=86
+													85:leaf=-0.0194211286
+													86:leaf=-0.00658231089
+												76:[genre_Adventure<1] yes=87,no=88,missing=88
+													87:[price_initial<2999] yes=99,no=100,missing=100
+														99:leaf=-0.00920519978
+														100:leaf=0.00172589801
+													88:leaf=0.0102306521
+										64:[max_age_rating<12] yes=69,no=70,missing=70
+											69:leaf=0.00624717725
+											70:leaf=0.0171949118
+								48:leaf=-0.0192194767
+						28:[max_age_rating<7] yes=35,no=36,missing=36
+							35:leaf=0.0107128164
+							36:leaf=0.0112637533
+					22:[achievements<16] yes=29,no=30,missing=30
+						29:[achievements<6] yes=37,no=38,missing=38
+							37:[genre_Action<1] yes=49,no=50,missing=50
+								49:leaf=-0.0112646343
+								50:leaf=0.00889817718
+							38:leaf=-0.0291897561
+						30:[has_violence_content<1] yes=39,no=40,missing=40
+							39:[price_initial<400] yes=51,no=52,missing=52
+								51:leaf=-0.00411264645
+								52:leaf=0.0162981264
+							40:[supported_languages<2] yes=53,no=54,missing=54
+								53:leaf=-0.0173510239
+								54:leaf=0.00125954254
+			8:leaf=0.0110993674
+	2:leaf=-0.0104194293
+

@@ -1,0 +1,112 @@
+决策树使用的特征名称列表（共110个特征，排除聚类指标）:
+================================================================================
+  1. platforms_windows
+  2. platforms_mac
+  3. platforms_linux
+  4. supported_languages
+  5. controller_support
+  6. achievements
+  7. dlc
+  8. required_age
+  9. is_free
+ 10. price_initial
+ 11. price_final
+ 12. price_discount_percent
+ 13. category_Adjustable Difficulty
+ 14. category_Adjustable Text Size
+ 15. category_Camera Comfort
+ 16. category_Captions available
+ 17. category_Co-op
+ 18. category_Color Alternatives
+ 19. category_Commentary available
+ 20. category_Cooperativos
+ 21. category_Cooperativos en línea
+ 22. category_Cooperativos en pantalla dividida/compartida
+ 23. category_Cross-Platform Multiplayer
+ 24. category_Custom Volume Controls
+ 25. category_Estadísticas
+ 26. category_Family Sharing
+ 27. category_Full controller support
+ 28. category_HDR available
+ 29. category_In-App Purchases
+ 30. category_Includes level editor
+ 31. category_JcJ
+ 32. category_JcJ en línea
+ 33. category_JcJ en pantalla dividida/compartida
+ 34. category_Keyboard Only Option
+ 35. category_LAN Co-op
+ 36. category_LAN PvP
+ 37. category_MMO
+ 38. category_Mouse Only Option
+ 39. category_Multi-player
+ 40. category_Multijugador
+ 41. category_Multijugador multiplataforma
+ 42. category_Narrated Game Menus
+ 43. category_Online Co-op
+ 44. category_Online PvP
+ 45. category_Pantalla dividida/compartida
+ 46. category_Partial Controller Support
+ 47. category_Playable without Timed Input
+ 48. category_PvP
+ 49. category_Remote Play Together
+ 50. category_Remote Play on Phone
+ 51. category_Remote Play on TV
+ 52. category_Remote Play on Tablet
+ 53. category_Save Anytime
+ 54. category_Shared/Split Screen
+ 55. category_Shared/Split Screen Co-op
+ 56. category_Shared/Split Screen PvP
+ 57. category_Single-player
+ 58. category_Stats
+ 59. category_Steam Achievements
+ 60. category_Steam Cloud
+ 61. category_Steam Leaderboards
+ 62. category_Steam Timeline
+ 63. category_Steam Trading Cards
+ 64. category_Steam Turn Notifications
+ 65. category_Steam Workshop
+ 66. category_Stereo Sound
+ 67. category_Subtitle Options
+ 68. category_Surround Sound
+ 69. category_Touch Only Option
+ 70. category_Valve Anti-Cheat enabled
+ 71. genre_Action
+ 72. genre_Adventure
+ 73. genre_Animation & Modeling
+ 74. genre_Audio Production
+ 75. genre_Casual
+ 76. genre_Design & Illustration
+ 77. genre_Early Access
+ 78. genre_Education
+ 79. genre_Free To Play
+ 80. genre_Game Development
+ 81. genre_Gore
+ 82. genre_Indie
+ 83. genre_Massively Multiplayer
+ 84. genre_Movie
+ 85. genre_Nudity
+ 86. genre_Photo Editing
+ 87. genre_RPG
+ 88. genre_Racing
+ 89. genre_Sexual Content
+ 90. genre_Simulation
+ 91. genre_Software Training
+ 92. genre_Sports
+ 93. genre_Strategy
+ 94. genre_Utilities
+ 95. genre_Video Production
+ 96. genre_Violent
+ 97. genre_Web Publishing
+ 98. support_english_0.0
+ 99. support_english_1.0
+100. support_english_Unknown
+101. is_mainstream_developer
+102. is_mainstream_publisher
+103. has_esrb_rating
+104. has_pegi_rating
+105. has_dejus_rating
+106. max_age_rating
+107. banned_in_germany
+108. has_violence_content
+109. controller_support_binary
+110. has_vr_support
